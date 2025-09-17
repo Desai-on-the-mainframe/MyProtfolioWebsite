@@ -1,13 +1,18 @@
-# Encrypt all source files
+# 🔒 Encrypt all source code
+src/** filter=git-crypt diff=git-crypt
+
+# 🔒 Encrypt sensitive configs
+*.config.js filter=git-crypt diff=git-crypt
+vite.config.js filter=git-crypt diff=git-crypt
+
+# 🔒 Encrypt any other JS/TS not in src
 *.js filter=git-crypt diff=git-crypt
 *.ts filter=git-crypt diff=git-crypt
-*.dart filter=git-crypt diff=git-crypt
-*.java filter=git-crypt diff=git-crypt
-*.py filter=git-crypt diff=git-crypt
 
-# Keep docs, images, and license public
+# ✅ Keep these files public
 README.md !filter !diff
 LICENSE !filter !diff
-*.png !filter !diff
-*.jpg !filter !diff
-*.gif !filter !diff
+index.html !filter !diff
+package.json !filter !diff
+package-lock.json !filter !diff
+public/** !filter !diff
