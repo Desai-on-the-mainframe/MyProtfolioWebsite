@@ -1,0 +1,13 @@
+# Encrypt all source files
+*.js filter=git-crypt diff=git-crypt
+*.ts filter=git-crypt diff=git-crypt
+*.dart filter=git-crypt diff=git-crypt
+*.java filter=git-crypt diff=git-crypt
+*.py filter=git-crypt diff=git-crypt
+
+# Keep docs, images, and license public
+README.md !filter !diff
+LICENSE !filter !diff
+*.png !filter !diff
+*.jpg !filter !diff
+*.gif !filter !diff
